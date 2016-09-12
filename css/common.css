@@ -20,6 +20,10 @@ body {
     background: #fff
 }
 
+ol,ul {
+    list-style: none;
+}
+
 /*去掉Iphone的按钮默认样式*/
 input[type="button"], input[type="submit"], input[type="reset"] {
 	-webkit-appearance: none;
@@ -43,19 +47,14 @@ figure, form, fieldset {
 	padding:0
 }
 
-a, button, input {/* 1.去除android a/button/input标签被点击时产生的边框 2.去除ios a标签被点击时产生的半透明灰色背景 */
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	-webkit-tap-highlight-color: transparent; /* For some Androids */
+a, div, span, button, input {/* 1.去除android a/button/input标签被点击时产生的边框 2.去除ios a标签被点击时产生的半透明灰色背景 */
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
 }
-a:link, a:visited {
-	-webkit-transition: all .25s linear 0.05s;
-	-moz-transition: all .25s linear 0.05s;
-	-o-transition: all .25s linear 0.05s;
-	transition: all .25s linear 0.05s;
-}
+
 h4, h5, h6 {
 	font-size:1em;
 }
+
 dl {
 	padding-bottom: 10px;
 	margin-bottom: 10px;
@@ -77,16 +76,18 @@ input.radius {
 	padding-left: .6em;
 	padding-right: .6em;
 }
+
 input, select, textarea, h4, h5 {
 	font-size: 100%;
 	box-sizing: border-box;
 }
+
 a {
-	color:#0099FF;
 	text-decoration: none;
 }
-a:active {
-	color:#0099FF;
+
+a:hover {
+    text-decoration: none
 }
 
 body {
@@ -97,11 +98,13 @@ body {
 }
 
 i {
-	font-style: normal;
+	font-style: inherit;
 }
+
 p > a {
 	color: #55acef;
 }
+
 @font-face {
 	font-family: "iconfont";
 	src: url('iconfont.eot'); /* IE9*/
