@@ -1,54 +1,48 @@
-/*
-------------------------------------------------
-site:	taijisun register
-Author:    liuwanzhi
-updated:   3/7/2016
-update by: liuwanzhi
-------------------------------------------------
-------------------------------------------------
-COLORS
-body background:#fff
-container background:	#fff
-main text:#666666,Helvetica,Arial,Verdana,sans-serif;
-links:#0099FF
-title:#005495
-input button:#ABD8F8
-input border:#ABD8F8
-input text background:#EAF4FD
-------------------------------------------------
-*/
-body, html {
-	font:normal 100% "Microsoft YaHei", Arial, Helvetica, sans-serif;
-	display:block;
-	height:100%;
-	color:#555
+* {
+    box-sizing: border-box;
 }
+
+a,abbr,acronym,address,applet,big,blockquote,body,caption,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,iframe,img,ins,kbd,label,legend,li,object,ol,p,pre,q,s,samp,small,span,strike,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,ul,var {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: arial,\\5B8B\4F53;
+    font-size: 100%;
+    vertical-align: baseline
+}
+
+body {
+    line-height: 1;
+    color: #000;
+    background: #fff
+}
+
 /*去掉Iphone的按钮默认样式*/
 input[type="button"], input[type="submit"], input[type="reset"] {
 	-webkit-appearance: none;
+    -moz-appearance: none;
 }
+
 input, textarea, select {
 	font-size:1em;
 	font-size:100%;
 	font-family:arial;
 	font-family:inherit;
 }
-input[type="text"] {
-}
-input[type="button"], input[type="submit"], input[type="reset"] {
-	-webkit-appearance: none;
-}
 textarea {
 	-webkit-appearance: none;
+	-moz-appearance: none;
 }
+
 figure, form, fieldset {
 	border:0;
 	margin:0;
 	padding:0
 }
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, form {
-	margin:0;
-}
+
 a, button, input {/* 1.去除android a/button/input标签被点击时产生的边框 2.去除ios a标签被点击时产生的半透明灰色背景 */
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-tap-highlight-color: transparent; /* For some Androids */
@@ -59,12 +53,8 @@ a:link, a:visited {
 	-o-transition: all .25s linear 0.05s;
 	transition: all .25s linear 0.05s;
 }
-h1, h2, h3 {
-}
 h4, h5, h6 {
 	font-size:1em;
-}
-ul, ol {
 }
 dl {
 	padding-bottom: 10px;
@@ -77,13 +67,12 @@ dd {
 	line-height: 20px;
 	font-size: 12px;
 }
+
 /*image with no-border*/
 a img {
-	border:0;
+	border:none;
 }
-img {
-	border:0;
-}
+
 input.radius {
 	padding-left: .6em;
 	padding-right: .6em;
@@ -92,8 +81,6 @@ input, select, textarea, h4, h5 {
 	font-size: 100%;
 	box-sizing: border-box;
 }
-textarea {
-}
 a {
 	color:#0099FF;
 	text-decoration: none;
@@ -101,6 +88,14 @@ a {
 a:active {
 	color:#0099FF;
 }
+
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
 i {
 	font-style: normal;
 }
@@ -195,7 +190,7 @@ p > a {
 	margin-top: 15px!important;
 }
 .mt20 {
-	margin-top: 20px!important;
+	margin-top: 10px!important;
 }
 .mt46 {
 	margin-top: 46px!important;
