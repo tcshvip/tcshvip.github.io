@@ -110,14 +110,17 @@ p > a {
 	src: url('iconfont.eot'); /* IE9*/
 	src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */  url('iconfont.woff') format('woff'), /* chrome, firefox */  url('iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/  url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
+
 .iconfont {
 	font-family:"iconfont" !important;
 	font-size:16px;
 	font-style:normal;
+	font-weight: normal;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-stroke-width: 0.2px;
 	-moz-osx-font-smoothing: grayscale;
 }
+
 .icon-close:before { content: "\e616"; }
 .icon-edit:before { content: "\e617"; }
 .icon-location:before { content: "\e618"; }
@@ -560,6 +563,182 @@ box-sizing: border-box;
 	height:0;
 	overflow:hidden;
 }
+
+.nav-bar {
+    z-index: 9999
+}
+
+.nav-bar,.nav-bar .box {
+    height: 2.8125rem;
+    position: fixed
+}
+
+.nav-bar .box {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    width: 100%;
+    line-height: 2.8125rem;
+    text-align: center;
+    border-bottom: 1px solid #d7d7d7;
+    background-color: #fff
+}
+
+.nav-bar .login {
+    position: absolute;
+    right: 0;
+    padding: 0 1.5rem;
+    border-left: 1px solid #d7d7d7
+}
+
+.nav-bar .btn-back,.nav-bar .btn-back-2 {
+    position: absolute;
+    left: 0;
+    padding: 0 1.5rem 0 .9375rem;
+    height: 2.8125rem;
+    display: none
+}
+
+.nav-bar .btn-more {
+    position: absolute;
+    float: right;
+    right: 0;
+    padding: 0 .625rem
+}
+
+.nav-bar .icon-caretLeft,.nav-bar .icon-more {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-style: normal;
+    text-align: left;
+    text-indent: -9999px;
+    direction: ltr;
+    box-sizing: border-box
+}
+
+.nav-bar .icon-caretLeft {
+    color: #2d2d2d
+}
+
+.nav-bar .icon-caretLeft:after,.nav-bar .icon-caretLeft:before {
+    content: '';
+    pointer-events: none;
+    width: .875rem;
+    height: .125rem;
+    position: absolute;
+    bottom: 0;
+    margin: auto 0;
+    right: .125rem;
+    box-shadow: inset 0 0 0 32px;
+    -webkit-transform-origin: right;
+    transform-origin: right
+}
+
+.nav-bar .icon-caretLeft:before {
+    top: -.25rem;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg)
+}
+
+.nav-bar .icon-caretLeft:after {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg)
+}
+
+.nav-bar .icon-more {
+    color: #333;
+    width: .3125rem;
+    height: .3125rem;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 32px,0 -8px,0 8px;
+    margin: 1.25rem .4375rem
+}
+
+.nav-bar .icon-more:after,.nav-bar .icon-more:before {
+    content: '';
+    pointer-events: none
+}
+
+.nav-bar h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 1.5rem
+}
+
+.header {
+	height: 45px;
+	top: 0;
+	background-color: #55acef;
+	color: #fff;
+	z-index: 99999;
+	border-bottom: 1px #1875B3 solid;
+}
+.header > h1 {
+	margin: 0;
+	line-height: 45px;
+	font-size: 16px;
+	text-align: center;
+}
+.header > a.back, a.menu, a.shopCart , a.shopHome {
+	position: absolute;
+	padding: 10px;
+	font-size: 23px;
+	width: 25px;
+}
+
+.header, .footer {
+	position: fixed;
+	left: 0;
+	right: 0;
+}
+
+.footer {
+	height: 46px;
+	bottom: 0;
+	z-index: 1;
+	border-top: 1px #DDDCDC solid;
+	background:#fff
+}
+
+.footer.proFooter {
+	background: white;
+	width: 100%;
+	left: 0;
+	border-top: 2px #333 solid;
+	text-align: center;
+	bottom: 0;
+}
+
+.footer > h4 {
+	float: left;
+	width: 25%;
+	margin: 0;
+	text-align: center;
+}
+
+.footer a {
+	text-align: center;
+	display: block;
+	-webkit-transition: color .35s;
+	transition: color .35s;
+	color: #6B6B6B;
+	font-size:12px;
+	padding-top:4px;
+}
+
+.footer a.active {
+	color: #2C566C;    
+	background: #E4E4E4;
+}
+
 .flex1 {
 	-moz-box-flex:1.0; /* Firefox */
 	-webkit-box-flex:1.0; /* Safari 和 Chrome */
@@ -589,44 +768,61 @@ box-sizing: border-box;
 	-o-transition: all .25s linear;
 	transition: all .25s linear;
 }
-				
-/* PC客户端或大屏幕设备: 1028px 至更大 */
-@media screen and (min-width: 1024px) {
-header, .main {
-	width:960px;
-	margin:0 auto
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:2dppx),only screen and (min-resolution:192dpi) {
+    .icon-edit {
+        background-image:url(./images/icon_edit.png);
+        background-size: 20px 20px
+    }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:2dppx),only screen and (min-resolution:192dpi) {
+    .icon-empty-address {
+        background-image:url(./images/icon_empty_address.png);
+        background-size: 50px 56px
+    }
 }
-body, html {
-	font-size:20px
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:2dppx),only screen and (min-resolution:192dpi) {
+    .icon-search {
+        background-image:url(./images/icon_search.png);
+        background-size: 16px 16px
+    }
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:2dppx),only screen and (min-resolution:192dpi) {
+    .icon-address-search-clear {
+        background-image:url(./images/icon_delete.png);
+        background-size: 15px 15px
+    }
 }
-@media screen and (max-width: 1023px) {
-body, html {
-	font-size:20px
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:2dppx),only screen and (min-resolution:192dpi) {
+    .icon-address-search {
+        background-image:url(./images/icon_search.png);
+        background-size: 16px 16px
+    }
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:2dppx),only screen and (min-resolution:192dpi) {
+    .icon-positon {
+        background-image:url(./images/icon_address.png);
+        background-size: 13px 17px
+    }
 }
-/* 平板之类的宽度 1024 以下设备 */
-@media screen and (max-width: 960px) {
-body, html {
-	font-size:20px
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:2dppx),only screen and (min-resolution:192dpi) {
+    .icon-address-location {
+        background-image:url(./images/icon_address.png);
+        background-size: 16px 13px
+    }
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:2dppx),only screen and (min-resolution:192dpi) {
+    .icon-add-address {
+        background-image:url(./images/icon_add.png);
+        background-size: 24px 24px
+    }
 }
-@media screen and (max-width: 768px) {
-body, html {
-	font-size:18px
-}
-}
-/* Phone */
-@media screen and (max-width: 640px) {
-body, html {
-	font-size:16px
-}
-}
-@media screen and (max-width: 480px) {
-body, html {
-	font-size:14px
-}
-}
-/* 横屏 */
-@media screen and (orientation:landscape) {
+
+
 }

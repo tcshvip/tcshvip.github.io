@@ -15,12 +15,16 @@ $(document).ready( function() {
 </script>
 <title>微店信息</title>
 <link rel="stylesheet" href="css/common.css">
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/shopInfo.css">
 </head>
 <body>
-<div class="header"><a href="javascript:history.go(-1)" class="iconfont back" style="left:0"></a>
-  <h1>微店信息</h1>
-</div>
+  <header>
+    <div class="nav-bar">
+      <div class="box">
+        <a class="btn-back" href="#"><i class="icon-caretLeft"></i></a><h1>微店信息</h1>
+      </div>
+    </div>
+  </header>
 <div class="content js_container">
   <div class="hd cwh bgb">
     <div class="plr15">
@@ -128,7 +132,26 @@ $(document).ready( function() {
     </div>
   </div>
 </div>
-<footer class="footer inline-box"><a href="index.html" class="inline_four"><p><i class="iconfont icon-dianpu f20"></i></p><p>首页</p></a><a href="搜索.html" class="inline_four"><p><i class="iconfont icon-search f20"></i></p><p>分类</p></a><a href="微店管理.html" class="inline_four active"><p><i class="iconfont icon-woguanlidedianpu f20"></i></p><p>微店信息</p></a><a href="userIndex.html" class="inline_four"><p><i class="iconfont icon-zhanghao1 f20"></i></p><p>会员中心</p></a></footer>
+
+<footer class="footer inline-box">
+    <a href="index.html" class="inline_four">
+      <p><i class="iconfont icon-dianpu f20"></i></p>
+      <p>首页</p>
+    </a>
+    <a href="category.html" class="inline_four">
+      <p><i class="iconfont icon-dingdan1 f20"></i></p>
+      <p>分类</p>
+    </a>
+    <a href="微店管理.html" class="inline_four active">
+      <p><i class="iconfont icon-woguanlidedianpu f20"></i></p>
+      <p>微店信息</p>
+    </a>
+    <a href="userIndex.html" class="inline_four">
+      <p><i class="iconfont icon-zhanghao1 f20"></i></p>
+      <p>会员中心</p>
+    </a>
+  </footer>
+
 <script src="css/js/js.js"></script> 
 <script src="css/fastclick.js"></script> 
 <script>
