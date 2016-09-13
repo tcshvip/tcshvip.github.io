@@ -163,8 +163,6 @@ p > a {
 .icon-dingdan1:before { content: "\e622"; }
 .icon-mima:before { content: "\e60d"; }
 
-
-.fa{font-family: Arial;}
 .m5 {
 	margin-left: 5px;
 }
@@ -703,7 +701,7 @@ box-sizing: border-box;
 .footer {
 	height: 46px;
 	bottom: 0;
-	z-index: 1;
+	z-index: 999;
 	border-top: 1px #DDDCDC solid;
 	background:#fff
 }
