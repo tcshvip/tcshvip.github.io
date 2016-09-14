@@ -2,748 +2,773 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-	<link href="css/nav/jquery-accordion-menu.css" rel="stylesheet" type="text/css" />
-	<!--微信网页开发样式库-->
-	<link href="css/weui.min.css" rel="stylesheet" type="text/css" />
-	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<script src="css/js/jquery-1.11.2.min.js" type="text/javascript"></script>
-	<!--滚动到顶部-->
-	<script src="css/js/jquery.scrollUp.min.js"></script>
-	<script src="css/js/jquery.easytabs.js" type="text/javascript"></script>
-	<!--幻灯片播放-->
-	<script src="css/js/swipe.js"></script>
-	<script>
-    $(function () {
-      var slider = Swipe(document.getElementById('slider'), {
-        auto: 3000, //设置自动切换时间，单位毫秒
-        continuous: true,　//无限循环的图片切换效果
-		disableScroll: false,
-        callback: function(pos) {
-          var i = bullets.length;
-          while (i--) {
-            bullets[i].className = ' ';
-          }
-          bullets[pos].className = 'on';
-        }
-      });
-      var bullets = document.getElementById('position').getElementsByTagName('li');
-      $(".toggle").click(function(){
-        $(this).toggleClass("sel");
-        $("#zys").toggle();
-        vh=$(".nav").height()+64;
-        if($(".nav").is(":visible")==false){
-          $("#content").css("margin-top","54px");}else{$("#content").css("margin-top",vh);}
-        })
-    });
-  </script>
-	<title>物美超市</title>
-	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="css/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link href="css/nav/jquery-accordion-menu.css" rel="stylesheet" type="text/css"/>
+    <!--微信网页开发样式库-->
+    <link href="css/weui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <!--滚动到顶部-->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.easytabs.js" type="text/javascript"></script>
+    <!--幻灯片播放-->
+    <script src="js/swipe.js"></script>
+    <script>
+        $(function () {
+            var slider = Swipe(document.getElementById('slider'), {
+                auto: 3000, //设置自动切换时间，单位毫秒
+                continuous: true,　//无限循环的图片切换效果
+                disableScroll: false,
+                callback: function (pos) {
+                    var i = bullets.length;
+                    while (i--) {
+                        bullets[i].className = ' ';
+                    }
+                    bullets[pos].className = 'on';
+                }
+            });
+            var bullets = document.getElementById('position').getElementsByTagName('li');
+            $(".toggle").click(function () {
+                $(this).toggleClass("sel");
+                $("#zys").toggle();
+                vh = $(".nav").height() + 64;
+                if ($(".nav").is(":visible") == false) {
+                    $("#content").css("margin-top", "54px");
+                } else {
+                    $("#content").css("margin-top", vh);
+                }
+            })
+        });
+    </script>
+    <title>物美超市</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-	<div class="main-info">
-		<div class="main-wraper">
-			<div class="loc-icon"></div>
-			<div class="loc-txt cwh">华东物美超市</div>
-			<i class="fa fa-angle-right fa-1g cwh"></i>
-		</div>
-	</div>
+<div class="main-info">
+    <div class="main-wraper">
+        <div class="loc-icon"></div>
+        <div class="loc-txt cwh">华东物美超市</div>
+        <i class="fa fa-angle-right fa-1g cwh"></i>
+    </div>
+</div>
 
-	<div class="content js_container mt0">
+<div class="content js_container mt0">
 
-		<!--幻灯片开始-->
-		<div class="topImg bgwh">
-			<div id="slider" class="swipe" style="visibility: visible;">
-				<div class="swipe-wrap">
-					<figure>
-						<div class="wrap">
-							<a href="#"><img src="images/news/u236.jpg" alt="" class="pct100"></a>
-						</div>
-					</figure>
-					<figure>
-						<div class="wrap">
-							<a href="#"><img src="images/news/u237.jpg" alt="" class="pct100"></a>
-						</div>
-					</figure>
-					<figure>
-						<div class="wrap">
-							<a href="#"><img src="images/news/u238.jpg" alt="" class="pct100"></a>
-						</div>
-					</figure>
-				</div>
-			</div>
+    <!--幻灯片开始-->
+    <div class="topImg bgwh">
+        <div id="slider" class="swipe" style="visibility: visible;">
+            <div class="swipe-wrap">
+                <figure>
+                    <div class="wrap">
+                        <a href="#"><img src="images/news/u236.jpg" alt="" class="pct100"></a>
+                    </div>
+                </figure>
+                <figure>
+                    <div class="wrap">
+                        <a href="#"><img src="images/news/u237.jpg" alt="" class="pct100"></a>
+                    </div>
+                </figure>
+                <figure>
+                    <div class="wrap">
+                        <a href="#"><img src="images/news/u238.jpg" alt="" class="pct100"></a>
+                    </div>
+                </figure>
+            </div>
+        </div>
 
-			<nav>
-				<ul id="position" style="position: absolute;z-index: 1;top: -20px;left: 50%;margin-left: -23px;">
-					<li class="on"></li>
-					<li class=""></li>
-					<li class=""></li>
-				</ul>
-			</nav>
-		</div>
-		<!--幻灯片结束-->
+        <nav>
+            <ul id="position" style="position: absolute;z-index: 1;top: -20px;left: 50%;margin-left: -23px;">
+                <li class="on"></li>
+                <li class=""></li>
+                <li class=""></li>
+            </ul>
+        </nav>
+    </div>
+    <!--幻灯片结束-->
 
-		<!--通知-->
-		<div class="note">
-			<a class="bkg-box" href="javascript:void(0);">
-				<img src="./css/images/10.jpg" alt="" class="bbs-img"><img src="./css/images/icon_note.png" alt="" class="bbs-logo" data-evernote-hover-show="true">
-			</a>
-			<div class="note-content">本地购物，半日送达，省心省力</div>
-		</div>
+    <!--通知-->
+    <div class="note">
+        <a class="bkg-box" href="javascript:void(0);">
+            <img src="./css/images/10.jpg" alt="" class="bbs-img"><img src="./css/images/icon_note.png" alt=""
+                                                                       class="bbs-logo" data-evernote-hover-show="true">
+        </a>
+        <div class="note-content">本地购物，半日送达，省心省力</div>
+    </div>
 
-		<div class="title-sec two-pic">
-			<div class="sec-body">
-				<a href="productInfo.html"><img src="images/17.jpg"></a>
-				<a href="productInfo.html"><img src="images/18.jpg"></a>
-			</div>
-		</div>
+    <div class="title-sec two-pic">
+        <div class="sec-body">
+            <a href="productInfo.html"><img src="images/17.jpg"></a>
+            <a href="productInfo.html"><img src="images/18.jpg"></a>
+        </div>
+    </div>
 
-		<div class="sec-bar">
-			<div class="tit-content">
-				<div class="tit-l">中秋在一起</div>
-			</div>
-		</div>
+    <div class="sec-bar">
+        <div class="tit-content">
+            <div class="tit-l">中秋在一起</div>
+        </div>
+    </div>
 
-		<div class="title-sec one-pic">
-			<div class="sec-body">
-				<a href="productList.html">
-					<img src="images/19.jpg">
-				</a>
-				<a href="productList.html">
-					<img src="images/20.jpg">
-				</a>
-				<a href="productList.html">
-					<img src="images/21.jpg">
-				</a>
-			</div>
-		</div>
+    <div class="title-sec one-pic">
+        <div class="sec-body">
+            <a href="productList.html">
+                <img src="images/19.jpg">
+            </a>
+            <a href="productList.html">
+                <img src="images/20.jpg">
+            </a>
+            <a href="productList.html">
+                <img src="images/21.jpg">
+            </a>
+        </div>
+    </div>
 
-		<div class="sec-bar">
-			<div class="tit-content">
-				<div class="tit-l">热门推荐商品</div>
-			</div>
-		</div>
+    <div class="sec-bar">
+        <div class="tit-content">
+            <div class="tit-l">热门推荐商品</div>
+        </div>
+    </div>
 
-		<div class="common-sec slide-products">
-			<div class="goods-wrapper">
-				<ul class="slides-list">
-					<li code="P40_9012_Web" qty="stockLevel">
-						<div class="item">
-							<a href="productInfo.html" class="img"><img src="./images/26.jpg" data-evernote-hover-show="true" class=" b-loaded"></a>
-							<h4><a href="productInfo.html">哈密瓜2.5kg</a></h4>
-							<div class="bar">
-								<p class="rmb"><small>￥9.95</small>
-									<del>￥10.95</del>
-								</p>
-								<div class="shopping">
-									<a href="javascript:void(0)"></a>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li code="P72_9012_Web" qty="stockLevel">
-						<div class="item">
-							<a href="productInfo.html" class="img"><img src="./images/27.jpg" data-evernote-hover-show="true" class=" b-loaded"></a>
-							<h4><a href="">榴莲3000g</a></h4>
-							<div class="bar">
-								<p class="rmb"><small>￥71.40</small>
-									<del>￥81.95</del>
-								</p>
-								<div class="shopping">
-									<a href="javascript:void(0)"></a>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li code="P72_9012_Web" qty="stockLevel">
-						<div class="item">
-							<a href="productInfo.html" class="img"><img src="./images/27.jpg" data-evernote-hover-show="true" class=" b-loaded"></a>
-							<h4><a href="productInfo.html">榴莲3000g</a></h4>
-							<div class="bar">
-								<p class="rmb"><small>￥71.40</small>
-									<del>￥81.95</del>
-								</p>
-								<div class="shopping">
-									<a href="javascript:void(0)"></a>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li code="P72_9012_Web" qty="stockLevel">
-						<div class="item">
-							<a href="productInfo.html" class="img"><img src="./images/27.jpg" data-evernote-hover-show="true" class=" b-loaded"></a>
-							<h4><a href="productInfo.html">榴莲3000g</a></h4>
-							<div class="bar">
-								<p class="rmb"><small>￥71.40</small>
-									<del>￥81.95</del>
-								</p>
-								<div class="shopping">
-									<a href="javascript:void(0)"></a>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li code="P72_9012_Web" qty="stockLevel">
-						<div class="item">
-							<a href="productInfo.html" class="img"><img src="./images/27.jpg" data-evernote-hover-show="true" class=" b-loaded"></a>
-							<h4><a href="productInfo.html">榴莲3000g</a></h4>
-							<div class="bar">
-								<p class="rmb"><small>￥71.40</small>
-									<del>￥81.95</del>
-								</p>
-								<div class="shopping">
-									<a href="javascript:void(0)"></a>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li code="P72_9012_Web" qty="stockLevel">
-						<div class="item">
-							<a href="productInfo.html" class="img"><img src="./images/27.jpg" data-evernote-hover-show="true" class=" b-loaded"></a>
-							<h4><a href="productInfo.html">榴莲3000g</a></h4>
-							<div class="bar">
-								<p class="rmb"><small>￥71.40</small>
-									<del>￥81.95</del>
-								</p>
-								<div class="shopping">
-									<a href="javascript:void(0)"></a>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li code="P72_9012_Web" qty="stockLevel">
-						<div class="item">
-							<a href="productInfo.html" class="img"><img src="./images/27.jpg" data-evernote-hover-show="true" class=" b-loaded"></a>
-							<h4><a href="productInfo.html">榴莲3000g</a></h4>
-							<div class="bar">
-								<p class="rmb"><small>￥71.40</small>
-									<del>￥81.95</del>
-								</p>
-								<div class="shopping">
-									<a href="javascript:void(0)"></a>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
+    <div class="common-sec slide-products">
+        <div class="goods-wrapper">
+            <ul class="slides-list">
+                <li code="P40_9012_Web" qty="stockLevel">
+                    <div class="item">
+                        <a href="productInfo.html" class="img"><img src="./images/26.jpg"
+                                                                    data-evernote-hover-show="true"
+                                                                    class=" b-loaded"></a>
+                        <h4><a href="productInfo.html">哈密瓜2.5kg</a></h4>
+                        <div class="bar">
+                            <p class="rmb">
+                                <small>￥9.95</small>
+                                <del>￥10.95</del>
+                            </p>
+                            <div class="shopping">
+                                <a href="javascript:void(0)"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li code="P72_9012_Web" qty="stockLevel">
+                    <div class="item">
+                        <a href="productInfo.html" class="img"><img src="./images/27.jpg"
+                                                                    data-evernote-hover-show="true"
+                                                                    class=" b-loaded"></a>
+                        <h4><a href="">榴莲3000g</a></h4>
+                        <div class="bar">
+                            <p class="rmb">
+                                <small>￥71.40</small>
+                                <del>￥81.95</del>
+                            </p>
+                            <div class="shopping">
+                                <a href="javascript:void(0)"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li code="P72_9012_Web" qty="stockLevel">
+                    <div class="item">
+                        <a href="productInfo.html" class="img"><img src="./images/27.jpg"
+                                                                    data-evernote-hover-show="true"
+                                                                    class=" b-loaded"></a>
+                        <h4><a href="productInfo.html">榴莲3000g</a></h4>
+                        <div class="bar">
+                            <p class="rmb">
+                                <small>￥71.40</small>
+                                <del>￥81.95</del>
+                            </p>
+                            <div class="shopping">
+                                <a href="javascript:void(0)"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li code="P72_9012_Web" qty="stockLevel">
+                    <div class="item">
+                        <a href="productInfo.html" class="img"><img src="./images/27.jpg"
+                                                                    data-evernote-hover-show="true"
+                                                                    class=" b-loaded"></a>
+                        <h4><a href="productInfo.html">榴莲3000g</a></h4>
+                        <div class="bar">
+                            <p class="rmb">
+                                <small>￥71.40</small>
+                                <del>￥81.95</del>
+                            </p>
+                            <div class="shopping">
+                                <a href="javascript:void(0)"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li code="P72_9012_Web" qty="stockLevel">
+                    <div class="item">
+                        <a href="productInfo.html" class="img"><img src="./images/27.jpg"
+                                                                    data-evernote-hover-show="true"
+                                                                    class=" b-loaded"></a>
+                        <h4><a href="productInfo.html">榴莲3000g</a></h4>
+                        <div class="bar">
+                            <p class="rmb">
+                                <small>￥71.40</small>
+                                <del>￥81.95</del>
+                            </p>
+                            <div class="shopping">
+                                <a href="javascript:void(0)"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li code="P72_9012_Web" qty="stockLevel">
+                    <div class="item">
+                        <a href="productInfo.html" class="img"><img src="./images/27.jpg"
+                                                                    data-evernote-hover-show="true"
+                                                                    class=" b-loaded"></a>
+                        <h4><a href="productInfo.html">榴莲3000g</a></h4>
+                        <div class="bar">
+                            <p class="rmb">
+                                <small>￥71.40</small>
+                                <del>￥81.95</del>
+                            </p>
+                            <div class="shopping">
+                                <a href="javascript:void(0)"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li code="P72_9012_Web" qty="stockLevel">
+                    <div class="item">
+                        <a href="productInfo.html" class="img"><img src="./images/27.jpg"
+                                                                    data-evernote-hover-show="true"
+                                                                    class=" b-loaded"></a>
+                        <h4><a href="productInfo.html">榴莲3000g</a></h4>
+                        <div class="bar">
+                            <p class="rmb">
+                                <small>￥71.40</small>
+                                <del>￥81.95</del>
+                            </p>
+                            <div class="shopping">
+                                <a href="javascript:void(0)"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-		<div class="sec-bar">
-			<div class="tit-content">
-				<div class="tit-l">优惠商品</div>
-			</div>
-		</div>
+    <div class="sec-bar">
+        <div class="tit-content">
+            <div class="tit-l">优惠商品</div>
+        </div>
+    </div>
 
-		<div class="floor-box-nav">
-			<ul style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 100ms; transform: translate(0px, 0px) translateZ(0px);">
-				<li class="selected"><a href="#001">生鲜</a></li>
-				<li><a href="#002">食品</a></li>
-				<li><a href="#003">用品</a></li>
-				<li><a href="#004">进口</a></li>
-			</ul>
-		</div>
+    <div class="floor-box-nav">
+        <ul style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 100ms; transform: translate(0px, 0px) translateZ(0px);">
+            <li class="selected"><a href="#001">生鲜</a></li>
+            <li><a href="#002">食品</a></li>
+            <li><a href="#003">用品</a></li>
+            <li><a href="#004">进口</a></li>
+        </ul>
+    </div>
 
-		<div class="floor-box">
-			<a id="001">&nbsp;</a>
-			<div class="floor-item">
-				<div class="floor-name">生鲜</div>
-				<div class="floor-line"></div>
-			</div>
+    <div class="floor-box">
+        <a id="001">&nbsp;</a>
+        <div class="floor-item">
+            <div class="floor-name">生鲜</div>
+            <div class="floor-line"></div>
+        </div>
 
-			<ul class="goods-list">
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
+        <ul class="goods-list">
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-		<div class="floor-box">
-			<a id="002">&nbsp;</a>
-			<div class="floor-item">
-				<div class="floor-name">食品</div>
-				<div class="floor-line"></div>
-			</div>
+    <div class="floor-box">
+        <a id="002">&nbsp;</a>
+        <div class="floor-item">
+            <div class="floor-name">食品</div>
+            <div class="floor-line"></div>
+        </div>
 
-			<ul class="goods-list">
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
+        <ul class="goods-list">
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-		<div class="floor-box">
-			<a id="003">&nbsp;</a>
-			<div class="floor-item">
-				<div class="floor-name">用品</div>
-				<div class="floor-line"></div>
-			</div>
+    <div class="floor-box">
+        <a id="003">&nbsp;</a>
+        <div class="floor-item">
+            <div class="floor-name">用品</div>
+            <div class="floor-line"></div>
+        </div>
 
-			<ul class="goods-list">
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
+        <ul class="goods-list">
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-		<div class="floor-box">
-			<a id="004">&nbsp;</a>
-			<div class="floor-item">
-				<div class="floor-name">进口</div>
-				<div class="floor-line"></div>
-			</div>
+    <div class="floor-box">
+        <a id="004">&nbsp;</a>
+        <div class="floor-item">
+            <div class="floor-name">进口</div>
+            <div class="floor-line"></div>
+        </div>
 
-			<ul class="goods-list">
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="item">
-						<a href="productInfo.html" class="img">
-							<img src="images/ab5.jpg" class="b-lazy b-loaded" />
-						</a>
-						<h4><a href="">每日坚果</a></h4>
-						<div class="bar">
-							<p class="rmb">
-								<i class="normal"></i><br />
-								<small>￥10.95</small>
-								<del>￥15.00</del>
-							</p>
-							<div class="shopping">
-								<a href="javascript:void(0)"></a>
-							</div>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
+        <ul class="goods-list">
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item">
+                    <a href="productInfo.html" class="img">
+                        <img src="images/ab5.jpg" class="b-lazy b-loaded"/>
+                    </a>
+                    <h4><a href="">每日坚果</a></h4>
+                    <div class="bar">
+                        <p class="rmb">
+                            <i class="normal"></i><br/>
+                            <small>￥10.95</small>
+                            <del>￥15.00</del>
+                        </p>
+                        <div class="shopping">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-	</div>
+</div>
 
-	<footer class="footer inline-box">
-		<a href="index.html" class="inline_three active">
-			<p><i class="fa fa-home fa-2x"></i></p>
-			<p>首页</p>
-		</a>
-		<a href="category.html" class="inline_three">
-			<p><i class="fa fa-th-list fa-2x"></i></p>
-			<p>分类</p>
-		</a>
-		<a href="userIndex.html" class="inline_three">
-			<p><i class="fa fa-user fa-2x"></i></p>
-			<p>会员中心</p>
-		</a>
-	</footer>
+<footer class="footer inline-box">
+    <a href="index.html" class="inline_three active">
+        <p><i class="fa fa-home fa-2x"></i></p>
+        <p>首页</p>
+    </a>
+    <a href="category.html" class="inline_three">
+        <p><i class="fa fa-th-list fa-2x"></i></p>
+        <p>分类</p>
+    </a>
+    <a href="userIndex.html" class="inline_three">
+        <p><i class="fa fa-user fa-2x"></i></p>
+        <p>会员中心</p>
+    </a>
+</footer>
 
-	<script src="css/js/js.js"></script>
-	<script src="css/fastclick.js"></script>
-	<script>
-FastClick.attach(document.body);
+<script src="js/js.js"></script>
+<script src="css/fastclick.js"></script>
+<script>
+    FastClick.attach(document.body);
 </script>
 </body>
 

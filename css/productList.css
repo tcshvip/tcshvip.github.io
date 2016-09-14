@@ -421,7 +421,11 @@ ul.goods-list:after {
 ul.goods-list li {
     float: left;
     width: 50%;
-    padding: .3125rem
+    padding: .3125rem;
+    transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease; /* Firefox 4 */
+    -webkit-transition: width 0.3s ease; /* Safari 和 Chrome */
+    -o-transition: width 0.3s ease; /* Opera */
 }
 
 ul.goods-list li a {
