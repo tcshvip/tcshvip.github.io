@@ -824,3 +824,20 @@ box-sizing: border-box;
 
 
 }
+
+.message-top{
+	font-family: "Microsoft YaHei";
+	text-align: center;
+	height: 2.2rem;
+	line-height: 2.2rem;
+	font-size: 0.875rem;
+	position: relative;
+	margin-bottom: auto;
+}
+
+.message-top .top-left{
+	font-size: 0.825rem;
+	position: absolute;
+	top: 0;
+	left: 0.3rem;
+}

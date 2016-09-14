@@ -1,6 +1,6 @@
 // JavaScript Document
 $(function () {
-    $.scrollUp();
+    // $.scrollUp();
     $("#zys a").click(function () {
         $("#zys").find(".active").removeClass("active");
         $(this).parent().toggleClass("active");
@@ -42,4 +42,16 @@ $(function () {
         });
     });
 
+
+    $('.carousel').carousel({
+        interval: 2000
+    });
+    var myElement = document.getElementById('carousel-example-generic');
+    var hm = new Hammer(myElement);
+    hm.on("swipeleft", function () {
+        $('#carousel-example-generic').carousel('next')
+    })
+    hm.on("swiperight", function () {
+        $('#carousel-example-generic').carousel('prev')
+    })
 });
