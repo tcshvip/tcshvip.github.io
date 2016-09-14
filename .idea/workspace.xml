@@ -2,40 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bafaf09f-84eb-4d8a-a38a-d441b5b14190" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/productList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selectMarket.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/js/jquery-1.11.2.min.js" afterPath="$PROJECT_DIR$/js/jquery-1.11.2.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/js/jquery-accordion-menu.js" afterPath="$PROJECT_DIR$/js/jquery-accordion-menu.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/js/jquery.easytabs.js" afterPath="$PROJECT_DIR$/js/jquery.easytabs.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/js/jquery.scrollUp.min.js" afterPath="$PROJECT_DIR$/js/jquery.scrollUp.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/js/js.js" afterPath="$PROJECT_DIR$/js/js.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/js/swipe.js" afterPath="$PROJECT_DIR$/js/swipe.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/category.html" afterPath="$PROJECT_DIR$/category.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/productList.css" afterPath="$PROJECT_DIR$/css/productList.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productInfo.html" afterPath="$PROJECT_DIR$/productInfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productList.html" afterPath="$PROJECT_DIR$/productList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userIndex.html" afterPath="$PROJECT_DIR$/userIndex.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userInfo.html" afterPath="$PROJECT_DIR$/userInfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/品牌介绍.html" afterPath="$PROJECT_DIR$/品牌介绍.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/地址.html" afterPath="$PROJECT_DIR$/地址.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/填加地址.html" afterPath="$PROJECT_DIR$/填加地址.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/店铺二维码.html" afterPath="$PROJECT_DIR$/店铺二维码.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/微店管理.html" afterPath="$PROJECT_DIR$/微店管理.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/我的一级分店.html" afterPath="$PROJECT_DIR$/我的一级分店.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/我的代金券.html" afterPath="$PROJECT_DIR$/我的代金券.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/我的佣金.html" afterPath="$PROJECT_DIR$/我的佣金.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/我的订单.html" afterPath="$PROJECT_DIR$/我的订单.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/提现成功.html" afterPath="$PROJECT_DIR$/提现成功.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/提现账号.html" afterPath="$PROJECT_DIR$/提现账号.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/本店订单.html" afterPath="$PROJECT_DIR$/本店订单.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/申请提现.html" afterPath="$PROJECT_DIR$/申请提现.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/订单详情.html" afterPath="$PROJECT_DIR$/订单详情.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/设置店铺-1.html" afterPath="$PROJECT_DIR$/设置店铺-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/设置店铺-2.html" afterPath="$PROJECT_DIR$/设置店铺-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/设置店铺-3.html" afterPath="$PROJECT_DIR$/设置店铺-3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/购物车.html" afterPath="$PROJECT_DIR$/购物车.html" />
     </list>
     <ignored path="tcshvip.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,8 +28,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+            <state relative-caret-position="336">
+              <caret line="28" column="19" selection-start-line="22" selection-start-column="18" selection-end-line="28" selection-end-column="19" />
               <folding>
                 <element signature="n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#9;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -235,25 +202,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1473814792229</updated>
-      <workItem from="1473814794273" duration="2439000" />
+      <workItem from="1473814794273" duration="2903000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2439000" />
+    <option name="totallyTimeSpent" value="2903000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1600" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.185" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18769816" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958803" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904884" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -376,8 +343,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+        <state relative-caret-position="336">
+          <caret line="28" column="19" selection-start-line="22" selection-start-column="18" selection-end-line="28" selection-end-column="19" />
           <folding>
             <element signature="n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#9;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
