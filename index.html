@@ -19,14 +19,15 @@
             var slider = Swipe(document.getElementById('slider'), {
                 auto: 3000, //设置自动切换时间，单位毫秒
                 continuous: true,　//无限循环的图片切换效果
+                disableScroll: false,  //阻止由于触摸而滚动屏幕
                 disableScroll: false,
-//                callback: function (pos) {
-//                    var i = bullets.length;
-//                    while (i--) {
-//                        bullets[i].className = ' ';
-//                    }
-//                    bullets[pos].className = 'on';
-//                }
+                callback: function (pos) {
+                    var i = bullets.length;
+                    while (i--) {
+                        bullets[i].className = ' ';
+                    }
+                    bullets[pos].className = 'on';
+                }
             });
             var bullets = document.getElementById('position').getElementsByTagName('li');
             $(".toggle").click(function () {
