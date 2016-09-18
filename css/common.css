@@ -2,14 +2,15 @@
     box-sizing: border-box;
 }
 
-a,abbr,acronym,address,applet,big,blockquote,body,caption,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,iframe,img,ins,kbd,label,legend,li,object,ol,p,pre,q,s,samp,small,span,strike,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,ul,var {
+a,abbr,acronym,address,applet,big,blockquote,body,caption,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,iframe,img,ins,kbd,label,legend,li,object,ol,p,pre,q,s,samp,small,span,strike,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,ul,var {
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
     font-weight: inherit;
     font-style: inherit;
-    font-family: arial,\\5B8B\4F53;
+    /*font-family: arial,\\5B8B\4F53;*/
+	font-family: "Microsoft YaHei";
     font-size: 100%;
     vertical-align: baseline
 }
@@ -17,7 +18,8 @@ a,abbr,acronym,address,applet,big,blockquote,body,caption,cite,code,dd,del,dfn,d
 body {
     line-height: 1;
     color: #000;
-    background: #fff
+    background: #fff;
+	font-family: "Microsoft YaHei";
 }
 
 ol,ul {
@@ -826,18 +828,98 @@ box-sizing: border-box;
 }
 
 .message-top{
-	font-family: "Microsoft YaHei";
+	/*font-family: "Microsoft YaHei";*/
 	text-align: center;
-	height: 2.2rem;
-	line-height: 2.2rem;
+	height: 2.7rem;
+	line-height: 2.7rem;
 	font-size: 0.875rem;
-	position: relative;
+	position: fixed;
+	width: 100%;
+	top:0;
+	/*position: relative;*/
 	margin-bottom: auto;
+	border-bottom: 1px solid #b2b2b2;
+	background-color: #f9f9f9;
 }
 
 .message-top .top-left{
-	font-size: 0.825rem;
+	/*font-size: 0.825rem;*/
 	position: absolute;
 	top: 0;
 	left: 0.3rem;
+	color: #007aff;
+}
+.content{
+	margin-top: 43px;
+}
+.content-top{
+	background-color: #c9c9ce;
+	padding: 8px;
+	border-bottom: 1px solid #b2b2b2;
+}
+.content-top .form-control{
+	width: 100%;
+	height: 28px;
+	line-height: 28px;
+	border: none;
+	border-radius: 4px;
+}
+.content-list li{
+	font-size: 16px;
+	position: relative;
+}
+.content-list-edit .box-container{
+	left: 12px;
+}
+
+.content-list-edit .content-index{
+	margin-left: 54px;
+}
+
+.box-container{
+	position: absolute;
+	left: -100%;
+	line-height: 82px;
+	transition: left 0.5s;
+	-moz-transition: left 0.5s; /* Firefox 4 */
+	-webkit-transition: left 0.5s; /* Safari 和 Chrome */
+	-o-transition: left 0.5s; /* Opera */
+}
+.redio-box{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #c7c7cc;
+	border-radius: 50%;
+}
+.content-index{
+	margin-left: 28px;
+	padding-right: 13px;
+	border-bottom: 1px solid #c8c7cc;
+	padding-top: 8px;
+	padding-bottom: 7px;
+	transition: margin-left 0.5s;
+	-moz-transition: margin-left 0.5s; /* Firefox 4 */
+	-webkit-transition: margin-left 0.5s; /* Safari 和 Chrome */
+	-o-transition: margin-left 0.5s; /* Opera */
+}
+.figcaption{
+	height: 44px;
+}
+.message-title{
+	/*padding-right: 8px;*/
+}
+p{
+	/*font-family: "Microsoft YaHei";*/
+	line-height: 22px;
+}
+.font-gray{
+	color: #8e8e93;
+}
+
+.logout{
+	color: #c7c7cc;
+	font-size: 22px;
+	float: right;
+	margin-left: 9px;
 }
