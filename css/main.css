@@ -1849,7 +1849,8 @@ ul.goods-list li .item .bar .shopping a,ul.goods-list li .item .bar .supply a {
 .note .bbs-logo {
     padding-left: .4375rem;
     width: 25%;
-    line-height: 1.125rem
+    line-height: 1.125rem;
+	color: #d13935;
 }
 
 .note-content {

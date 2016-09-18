@@ -1,10 +1,6 @@
 // JavaScript Document
 $(function () {
-    // $.scrollUp();
-    $("#zys a").click(function () {
-        $("#zys").find(".active").removeClass("active");
-        $(this).parent().toggleClass("active");
-    })
+    $.scrollUp();
     $("#viewAll").click(function () {
         $(this).toggleClass("viewAll2");
         $("#viewAll2").toggle();
@@ -42,16 +38,4 @@ $(function () {
         });
     });
 
-
-    $('.carousel').carousel({
-        interval: 2000
-    });
-    var myElement = document.getElementById('carousel-example-generic');
-    var hm = new Hammer(myElement);
-    hm.on("swipeleft", function () {
-        $('#carousel-example-generic').carousel('next')
-    })
-    hm.on("swiperight", function () {
-        $('#carousel-example-generic').carousel('prev')
-    })
 });
